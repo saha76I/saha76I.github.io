@@ -529,20 +529,6 @@
       const pct = (e.clientX - rect.left) / rect.width;
       if (audio.duration) audio.currentTime = Math.max(0, Math.min(audio.duration, pct * audio.duration));
     });
-  
-    const cursorDot = document.getElementById('cursorDot');
-    window.addEventListener('mousemove', (e) => {
-      cursorDot.classList.add('active');
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top = e.clientY + 'px';
-    });
-    window.addEventListener('mouseleave', () => cursorDot.classList.remove('active'));
-    window.addEventListener('mousedown', () => {
-      cursorDot.style.transform = 'translate(-50%,-50%) scale(0.86)';
-    });
-    window.addEventListener('mouseup', () => {
-      cursorDot.style.transform = 'translate(-50%,-50%) scale(1)';
-    });
 
   </script>
 </body>
